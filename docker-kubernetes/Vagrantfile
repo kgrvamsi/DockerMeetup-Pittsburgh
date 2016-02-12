@@ -78,6 +78,7 @@ config.vm.define "master" do |coreos01|
    coreos01.ssh.username = "core"
    coreos01.vm.network "public_network"
    coreos01.vm.hostname = "master"
+   coreos01.vm.synced_folder "./", "/vagrant"
 end
 
 config.vm.define "slave01" do |coreos02|
@@ -86,6 +87,7 @@ config.vm.define "slave01" do |coreos02|
     coreos02.ssh.username = "core"
     coreos02.vm.network "public_network"
     coreos02.vm.hostname = "slave01"
+    coreos02.vm.synced_folder "./", "/vagrant"
 end
 
 config.vm.define "slave02" do |coreos03|
@@ -94,6 +96,7 @@ config.vm.define "slave02" do |coreos03|
     coreos03.ssh.username = "core"
     coreos03.vm.network "public_network"
     coreos03.vm.hostname = "slave02"
+    coreos03.vm.synced_folder "./", "/vagrant"
 end
 
 config.vm.define "slave03" do |coreos04|
@@ -102,6 +105,7 @@ config.vm.define "slave03" do |coreos04|
     coreos04.ssh.username = "core"
     coreos04.vm.network "public_network"
     coreos04.vm.hostname = "slave03"
+    coreos04.vm.synced_folder "./", "/vagrant"
 end
 
 end
